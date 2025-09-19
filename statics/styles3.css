@@ -1,0 +1,338 @@
+body.page-main {
+    background-image: url('img/tres.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Evitar que se desborde el contenido */
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: gray;
+    transition: background-color 0.3s;
+}
+
+.circle.green {
+    background-color: rgb(6, 187, 6);
+}
+
+.circle.red {
+    background-color: red;
+}
+
+.circle.gray {
+    background-color: gray;
+}
+
+.blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+
+
+.data-label {
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw; /* Tamaño proporcional al tamaño de la pantalla */
+    color: white;
+    background: rgba(211, 18, 18, 0);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.texto-fijo {
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+    font-size: 2vw; /* Tamaño relativo */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.texto-fijo-grande {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: cyan;
+    font-size: 2.5vw; /* Tamaño más grande */
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.texto-fijo-pequeño {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 1.5vw;
+    padding: 4px 6px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .data-label {
+        font-size: 3vw; /* Ajuste de fuente para pantallas pequeñas */
+    }
+
+    .texto-fijo {
+        font-size: 4vw;
+    }
+
+    .texto-fijo-grande {
+        font-size: 5vw;
+    }
+
+    .texto-fijo-pequeño {
+        font-size: 3vw;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .data-label {
+        font-size: 1vw; /* Fuente más pequeña para pantallas grandes */
+    }
+
+    .texto-fijo {
+        font-size: 1.5vw;
+    }
+
+    .texto-fijo-grande {
+        font-size: 2vw;
+    }
+
+    .texto-fijo-pequeño {
+        font-size: 1.2vw;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* From Uiverse.io by Praashoo7 */ 
+/* Teenage Engineering [EP-133 K.O. II] - Buttons */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.25em;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+  }
+  .button_pair {
+    display: flex;
+    column-gap: 1.5em;
+  }
+  .button_pair1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9em;
+  }
+  
+  
+  
+  .button1 {
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+    position: fixed; /* <- AÑADIR ESTA LÍNEA */
+    top: 580px;
+    left: 405px;
+    z-index: 10;
+}
+
+  .button2 {
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+    position: fixed;
+    top: 580px; /* Coloca el botón a 20px desde la parte superior */
+    left: 310px; /* Colócalo a 20px desde la parte izquierda */
+    z-index: 10;
+  }
+  .svg1 {
+    fill: #5f5f5f;
+    width: 25px;
+    height: 25px;
+    transition: 0.1s ease-in-out;
+  }
+  .svg2 {
+    fill: #5f5f5f;
+    width: 25px;
+    height: 25px;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .button3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+    position: fixed;
+    top: 580px; /* Coloca el botón a 20px desde la parte superior */
+    left: 1510px; /* Colócalo a 20px desde la parte izquierda */
+    z-index: 10;
+  }
+
+  /* boton comunicación */
+  .button4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+    position: fixed;
+    top: 580px; /* Coloca el botón a 20px desde la parte superior */
+    left: 520px; /* Colócalo a 20px desde la parte izquierda */
+    z-index: 10;
+    
+  }
+
+  .button5 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+    position: fixed;
+    top: 580px; /* Coloca el botón a 20px desde la parte superior */
+    left: 206px; /* Colócalo a 20px desde la parte izquierda */
+    z-index: 10;
+    
+  }
+
+  .button6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+    position: fixed;
+    top: 580px; /* Coloca el botón a 20px desde la parte superior */
+    left: 1630px; /* Colócalo a 20px desde la parte izquierda */
+    z-index: 10;
+  }
+  
+  .button_text {
+    color: white;
+    padding-top: 0.9em;
+    letter-spacing: 0.075em;
+    font-size: 0.85em;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .text {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 0.65em;
+  }
+  
+  
+  
+ 
+  .button3:active {
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+      #0787ff -3.2px -3.2px 8px 0px inset;
+  }
+  .button3:active .button_text {
+    transform: translateY(0.5px);
+  }
+  .button4:active {
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+      #0787ff -3.2px -3.2px 8px 0px inset;
+  }
+  .button4:active .button_text {
+    transform: translateY(0.5px);
+  }
+  /* Otras clases de botones también pueden tener un z-index alto */
+.button1, .button2, .button3, .button4 {
+    z-index: 10; /* Aseguramos que todos los botones estén por encima */
+}
+
+.button1:active,
+.button2:active {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.685),
+                inset -2px -2px 5px rgb(24, 74, 212);
+    transform: translateY(1px);
+}
+

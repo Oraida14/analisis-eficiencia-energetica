@@ -1,0 +1,147 @@
+body.page-main {
+    background-color: black;
+    background-image: url('/static/semi1.png');
+    background-size: 60%;
+    background-position: left 10px top 30px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tanques-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tanque {
+    position: relative;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cilindro {
+    position: relative;
+    background-color: rgba(32, 142, 146, 0);
+    width: 8px;
+    height: 50px;
+    transition: height 1.5s ease-in-out;
+    z-index: 10;
+    border: 2px solid #fcebf700;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(-1.2deg);
+    margin-bottom: 20px;
+}
+
+.flecha-nivel {
+    position: absolute;
+    background-color: rgba(0, 17, 255, 0.781);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    left: -120px;
+    z-index: 10;
+}
+
+.data-label {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+    background: rgba(255, 251, 0, 0.945);
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+.fecha-lectura {
+    color: #FFD700;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(58, 141, 219, 0.349);
+    padding: 6px 12px;
+    border-radius: 8px;
+    z-index: 20;
+    user-select: none;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.alerta-visual {
+    position: absolute;
+    top: -98px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.4em;
+    display: none;
+    animation: parpadeo 1.5s infinite;
+    color: red;
+    z-index: 20;
+    pointer-events: none;
+    width: 8vw;
+    height: 3vh;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.texto-alerta {
+    font-size: 0.8em;
+    margin-left: 10px;
+    color: white;
+}
+
+/* Estilos para los botones */
+.button1, .button2, .button3, .button4, .button5 {
+    z-index: 10;
+    position: fixed;
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bd867a;
+    box-shadow: rgba(134, 146, 82, 0.726) 10px 10px 8px, #866e62 2px 2px 10px 0px inset,
+      #fffcfc -4px -4px 1px 0px inset;
+    cursor: pointer;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+}
+
+.button1 {
+    top: 581px;
+    left: 1150px;
+}
+
+.button2 {
+    top: 580px;
+    left: 1030px;
+}
+
+.button3 {
+    top: 580px;
+    left: 1390px;
+}
+
+.button4 {
+    top: 580px;
+    left: 1270px;
+}
+
+.button5 {
+    top: 581px;
+    left: 910px;
+}

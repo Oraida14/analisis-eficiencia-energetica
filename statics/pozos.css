@@ -1,0 +1,763 @@
+/* ===================== */
+/*     RESET GLOBAL      */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+/* ===================== */
+/*     CONTENEDOR BASE   */
+/* ===================== */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url('img/tren_fondo_gris.png') center/cover no-repeat;
+  z-index: 1;
+}
+
+/* ===================== */
+/*         LOGOS         */
+/* ===================== */
+.logo-uno {
+  position: absolute;
+  top: 17px;
+  left: 140px;
+  width: 60px;
+}
+
+.logo-dos {
+  position: absolute;
+  top: 22px;
+  left: 1300px;
+  width: 160px;
+}
+
+/* ===================== */
+/*   IMÁGENES FLOTANTES  */
+/* ===================== */
+.floating-img {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#img1 { top: 11.4vh; left: 25.5vw; width: 15vw; }
+#img2 { top: 9vh; left: 40.6vw; width: 14.5vw; }
+#img3 { top: 4vh; left: 76.5vw; width: 25vw; }
+#img4 { top: 14.2vh; left: 47.4vw; width: 1vw; }
+#img5 { top: 19.8vh; left: 33.2vw; width: 0.9vw; }
+#img6 {
+  top: 51vh; left: 40.9vw; width: 7.2vw;
+  transform: rotate(-15deg); transform-origin: center;
+}
+#img7 {
+  top: 72vh; left: 11.2vw; width: 7.2vw;
+  transform: rotate(-57.55deg); transform-origin: center;
+}
+#img8 {
+  top: 56vh; left: 58vw; width: 2.2vw;
+  transform: rotate(180deg); transform-origin: center;
+}
+#img9 { top: 30vh; left: 88.8vw; width: 5.9vw; }
+
+/* ===================== */
+/*       ETIQUETAS       */
+/* ===================== */
+#label1 {
+  position: absolute; top: 18vh; left: 30.5vw;
+  color: black; font-size: 16px; background: transparent;
+}
+
+#label2 {
+  position: absolute; top: 20vh; left: 46.55vw;
+  color: rgb(0, 67, 250); font-size: 20.2px; background: transparent;
+}
+
+#label3 {
+  position: absolute; top: 90vh; left: 74vw;
+  color: rgba(224, 240, 6, 0.788); font-size: 22px;
+  background: rgba(13, 78, 163, 0.411); padding: 4px 8px;
+  border-radius: 5px;
+}
+
+#label4 {
+  position: absolute; top: 43vh; left: 84vw;
+  color: rgba(224, 240, 6, 0.788); font-size: 18px;
+  background: rgba(13, 78, 163, 0.808); padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.titulo-pozo {
+  position: absolute; top: 10px; left: 50%;
+  transform: translateX(-50%);
+  color: #000; font-size: 36px; font-weight: bold;
+  background-color: transparent; padding: 10px 20px;
+  border-radius: 12px; z-index: 10;
+}
+
+.button1, .button2, .button3, .button4 {
+  width: 5.7em;
+  height: 5.7em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #c7c3c0;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+              #ffffff 1.5px 1.5px 2px 0px inset,
+              #c7c3c0 -3.2px -3.2px 8px 0px inset;
+  transition: 0.1s ease-in-out;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar vertical */
+  align-items: center;     /* Centrar horizontal */
+}
+
+.button1:active, .button2:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.685),
+              inset -2px -2px 5px rgb(196, 26, 26);
+  transform: translateY(1px);
+}
+
+.button1 {
+  background-color: #644d48;
+  box-shadow: rgba(2, 2, 2, 0.377) 10px 10px 8px,
+              #866e62 2px 2px 10px 0px inset,
+              #070707 -4px -4px 1px 0px inset;
+  position: fixed;
+  top: 219px;
+  left: 1388px;
+}
+
+
+.button3 {
+  background-color: #644d48;
+  box-shadow: rgba(2, 2, 2, 0.377) 10px 10px 8px,
+              #866e62 2px 2px 10px 0px inset,
+              #070707 -4px -4px 1px 0px inset;
+  position: fixed;
+  top: 110px;
+  left: 1264px;
+}
+
+.button3:active {
+  box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px,
+              inset 0.5px 0.5px 4px #000000,
+              #d42a02 -3.2px -3.2px 8px 0px inset;
+}
+
+.button4 {
+  background-color: #545251;
+  box-shadow: rgba(2, 2, 2, 0.377) 10px 10px 8px,
+              #866e62 2px 2px 10px 0px inset,
+              #070707 -4px -4px 1px 0px inset;
+  position: fixed;
+  top: 220px;
+  left: 1268px;
+}
+
+.button4:active {
+  box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px,
+              inset 0.5px 0.5px 4px #000000,
+              #811612 -3.2px -3.2px 8px 0px inset;
+}
+
+.button2 {
+  background-color: #545251;
+  box-shadow: rgba(2, 2, 2, 0.377) 10px 10px 8px,
+              #866e62 2px 2px 10px 0px inset,
+              #070707 -4px -4px 1px 0px inset;
+  position: fixed;
+  top: 110px;
+  left: 1388px;
+}
+
+.button2:active {
+  box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px,
+              inset 0.5px 0.5px 4px #000000,
+              #811612 -3.2px -3.2px 8px 0px inset;
+}
+
+/* ===================== */
+/*       ORBITAL FX      */
+/* ===================== */
+.orbital {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 250px;
+  left: 1099px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+.orbital:hover {
+  transform: scale(1.1);
+}
+
+
+.ringOne {
+  top: -10px; right: -10px; bottom: -10px; left: -10px;
+  box-shadow: -5px -5px 15px rgba(15, 180, 231, 0.3);
+}
+.ringTwo {
+  top: -25px; right: -25px; bottom: -25px; left: -25px;
+  background: linear-gradient(to bottom, #161616 0%, #3d3d3d 100%);
+  z-index: -2;
+  animation: rotateClockwise 4s linear infinite;
+}
+.ringThree, .core {
+  background: radial-gradient(circle at center, #575b60 1%, #000000 100%);
+}
+.core {
+  top: 5px; left: 5px; right: 5px; bottom: 5px;
+  box-shadow: -1px 0px 0px #666, 0px -1px 0px #666;
+  animation: pulse 2s ease-in-out infinite;
+}
+.core:hover {
+  background: radial-gradient(circle at center, #373a3d 1%, #000000 100%);
+}
+
+
+/* ===================== */
+/*     SWITCH TOGGLE     */
+/* ===================== */
+#checkbox {
+  display: none;
+}
+.switch {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(99, 99, 99);
+  border: 2px solid rgb(126, 126, 126);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 3px inset rgb(2, 2, 2);
+  cursor: pointer;
+}
+.switch svg {
+  width: 1.2em;
+}
+.switch svg path {
+  fill: rgb(48, 48, 48);
+}
+#checkbox:checked + .switch {
+  background-color: rgb(146, 180, 184);
+  border-color: white;
+  box-shadow: 0 0 1px inset rgb(151, 243, 255),
+              0 0 40px rgb(151, 243, 255),
+              0 0 100px rgb(151, 243, 255);
+}
+#checkbox:checked + .switch svg path {
+  fill: white;
+}
+
+/* Slider estilo opcional adicional */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* ============================== */
+/* CONTROL INDEPENDIENTE DE ICONO Y POP-UP */
+/* ============================== */
+
+#gastoWarningIcon {
+  position: absolute;
+  top: 32vh;
+  left: 83.5vw;
+  width: 90px;
+  height: 90px;
+  animation: blink 1s infinite;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+#gastoWarningPopup {
+  position: absolute;
+  top: 52vh;
+  left: 82.2vw;
+  background-color: #fa0a0a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  font-size: 16px;
+  z-index: 1001;
+  display: none; /* Oculto por defecto */
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+/* ============================== */
+/* SELECTOR Y TARJETA */
+/* ============================== */
+/* Tarjeta de promedios diurno/nocturno */
+.promedio-card {
+  width: 280px;
+  min-height: 180px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promedio-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    rgba(0, 0, 0, 0.2) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -2px;
+}
+
+.promedio-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.promedio-card .dato {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.promedio-card .dato span {
+  font-weight: 600;
+}
+
+/* Colores de los valores diurno/nocturno */
+.promedio-card .diurno {
+  color: #00ffcc;
+}
+
+.promedio-card .nocturno {
+  color: #ffcc00;
+}
+
+/* Icono o indicador de alerta si es necesario */
+.promedio-card .alert-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* ============================== */
+/* Luces On Off
+/* ============================== */
+/* Tarjeta de promedios diurno/nocturno */
+
+/* From Uiverse.io by dexter-st */ 
+/* Radio group styles */
+.radio-group {
+  --radio-size-total: 120px; /* Total size */
+  --radio-border: 12px; /* Border thickness */
+
+  --radio-bg-hue: 220; /* Background hue */
+  --radio-border-hue: 210; /* Border hue */
+
+  --transition-speed: 0.05s; /* Transition speed for hover effects */
+  --glow-speed: 1.25s; /* Speed for glow animation */
+  --glow-times: 3; /* Number of times the glow animation runs */
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base */
+.radio-container {
+  position: relative;
+  width: var(--radio-size-total);
+  height: var(--radio-size-total);
+  border-radius: 50%;
+  background-color: hsl(var(--radio-border-hue), 20%, 20%);
+  box-shadow: 0 calc(var(--radio-border) / 3) 4px 0 #0007;
+}
+
+/* Base bevels */
+.radio-container::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: hsla(var(--radio-border-hue), 20%, 10%, 1);
+  mask: radial-gradient(
+    circle at 50% 50%,
+    transparent calc(var(--radio-size-total) / 2 - var(--radio-border)),
+    black calc(var(--radio-size-total) / 2 - var(--radio-border) + 1px),
+    black calc(var(--radio-size-total) / 2 - var(--radio-border) + 3px),
+    transparent calc(var(--radio-size-total) / 2 - var(--radio-border) + 5px),
+    transparent calc(var(--radio-size-total) / 2 - 5px),
+    black calc(var(--radio-size-total) / 2 - 3px)
+  );
+  z-index: 1;
+}
+
+.radio-button {
+  position: absolute;
+  top: calc(var(--radio-border) / 1);
+  left: calc(var(--radio-border) / 1);
+  width: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  height: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  border-radius: 50%;
+  background-color: hsl(var(--radio-bg-hue), 100%, 50%);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--radio-bg-hue), 100%, 60%) 0%,
+    hsl(var(--radio-bg-hue), 100%, 50%) 70%,
+    hsl(var(--radio-bg-hue), 100%, 30%) 100%
+  );
+  box-shadow: 0 calc(var(--radio-border) * 2) 6px 6px #0003;
+  transition: box-shadow var(--transition-speed) ease-in-out;
+}
+
+/* Gloss effects 1 */
+.radio-button::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: calc(-1 * var(--radio-border));
+  left: calc(-1 * var(--radio-border));
+  width: var(--radio-size-total);
+  height: var(--radio-size-total);
+  border-radius: 50%;
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      transparent calc(var(--radio-size-total) / 2 - var(--radio-border)),
+      hsla(var(--radio-border-hue), 100%, 0%, 0.5) 75%
+    ),
+    conic-gradient(
+      from 20deg at 50% 50%,
+      #fff 0%,
+      transparent 1%,
+      #fff4 20%,
+      #0002 50%,
+      #fff8 75%,
+      transparent 85%,
+      #fffa 86%,
+      #fff6 87%,
+      transparent 99%,
+      #fff 100%
+    );
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    transparent 0,
+    transparent 30%,
+    black 35%,
+    black calc(var(--radio-size-total) / 2),
+    transparent calc(var(--radio-size-total) / 2 + 2px)
+  );
+}
+
+/* Gloss effects 2 */
+.radio-button::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background-image:
+  /* Small reflection */
+    radial-gradient(
+      ellipse 6% 4% at 43% 29%,
+      #fffe 35%,
+      #fff8 55%,
+      transparent 100%
+    ),
+    /* Repeating small reflections */
+      radial-gradient(
+        ellipse 3% 2% at 75% 20%,
+        #fffd 45%,
+        #fff8 50%,
+        transparent 100%
+      ),
+    radial-gradient(
+      ellipse 2% 1% at 70% 30%,
+      #fffc 15%,
+      #fff7 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 2% 1% at 65% 40%,
+      #fffa 15%,
+      #fff5 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 3% 2% at 25% 22%,
+      #fffd 45%,
+      #fff8 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 2% 1% at 30% 32%,
+      #fffc 15%,
+      #fff7 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 2% 1% at 35% 42%,
+      #fffa 15%,
+      #fff5 50%,
+      transparent 100%
+    ),
+    /* Large reflection */
+      radial-gradient(
+        ellipse 70% 50% at 50% 37%,
+        transparent 0%,
+        #fff2 45%,
+        #fff3 51%,
+        transparent 57%
+      ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 40%,
+      #fff2 47%,
+      #fff1 68%,
+      transparent 59%,
+      transparent 100%
+    );
+
+  box-shadow: 0 0 calc(var(--radio-border) / 3) 3px #000c inset;
+  z-index: 1;
+  transition:
+    box-shadow var(--transition-speed) ease-in-out,
+    background-image var(--transition-speed) ease-in-out;
+}
+
+/* Radio input (no appearance) */
+.radio-input-element {
+  position: absolute;
+  top: calc(var(--radio-border) / 1);
+  left: calc(var(--radio-border) / 1);
+  width: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  height: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  appearance: none;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Radio icon */
+.radio-icon-element {
+  position: absolute;
+  pointer-events: none;
+
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+
+  fill: none;
+  stroke: rgba(230, 230, 230, 0.9);
+  stroke-width: 3px;
+  stroke-linecap: square;
+  filter: drop-shadow(0 14px 3px rgba(0, 0, 0, 0.4));
+
+  /* Simulate spherical shading */
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  mask-composite: exclude;
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 40%,
+    transparent 100%
+  );
+  -webkit-mask-composite: destination-out;
+
+  z-index: 0;
+  transition:
+    transform calc(var(--transition-speed) * 0.25) ease-in-out,
+    filter calc(var(--transition-speed) * 0.25) ease-in-out;
+}
+
+.glow {
+  pointer-events: none;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: color-mix(
+    in hsl,
+    hsl(var(--radio-bg-hue), 100%, 60%),
+    rgb(255, 225, 92) 15%
+  );
+  filter: blur(2em);
+  opacity: 0.45;
+  transform: perspective(100px) rotateX(10deg) scale(0.8);
+  z-index: 1;
+  opacity: 0;
+}
+
+/* Checked state styles */
+.radio-container:has(.radio-input-element:checked) {
+  .radio-button {
+    box-shadow: 0 calc(var(--radio-border) * 2) 12px 2px #0004;
+  }
+
+  .radio-button::after {
+    box-shadow: 0 0 var(--radio-border) calc(var(--radio-border) / 2) #000c
+      inset;
+  }
+  .glow {
+    animation: pulse var(--glow-speed) ease-in-out var(--glow-times) forwards;
+  }
+
+  .radio-icon-element {
+    filter: drop-shadow(0 12px 2px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.radio-container:has(.radio-input-element:checked):hover {
+  .radio-icon-element {
+    filter: drop-shadow(0 16px 4px rgba(0, 0, 0, 0.4));
+  }
+}
+
+.radio-container:has(.radio-input-element:checked):active {
+  .radio-icon-element {
+    filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Hover effect */
+.radio-container:hover {
+  .radio-button {
+    box-shadow: 0 calc(var(--radio-border) * 2.5) 12px 2px #0003;
+  }
+
+  .radio-button::after {
+    box-shadow: 0 0 calc(var(--radio-border) / 3) 3px #0005 inset;
+    scale: 1.05;
+  }
+
+  .radio-icon-element {
+    transform: scale(1.05);
+    filter: drop-shadow(0 16px 4px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Active state styles */
+.radio-container:active {
+  .radio-button {
+    box-shadow: 0 calc(var(--radio-border) * 1.5) 6px 4px #0003;
+  }
+
+  .radio-button::after {
+    box-shadow: 0 0 calc(var(--radio-border) / 1) var(--radio-border) #0009
+      inset;
+    scale: 1;
+  }
+
+  .radio-icon-element {
+    transform: scale(0.95);
+    filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Pulse animation for glow effect */
+@keyframes pulse {
+  0% {
+    transform: perspective(100px) rotateX(10deg) scale(0.8);
+    opacity: 0.45;
+  }
+  50% {
+    transform: perspective(100px) rotateX(10deg) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: perspective(100px) rotateX(10deg) scale(0.8);
+    opacity: 0.45;
+  }
+}
+
+/* Color themes */
+.success {
+  --radio-bg-hue: 145;
+}
+
+.warning {
+  --radio-bg-hue: 40;
+}
+
+.danger {
+  --radio-bg-hue: 355;
+}
+
+.info {
+  --radio-bg-hue: 200;
+}
