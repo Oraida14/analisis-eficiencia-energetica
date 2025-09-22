@@ -1,0 +1,6 @@
+RPU,Sitio,Mes,Año,SUBTOTAL,IVA 8%,DAP,Cargos y depósitos,Créditos y redondeos,TOTAL RECIBO,KWH,KVARH,Consumo base,Consumo inter,Consumo punta,"TOTAL KWh (suma b,i,p)",Demanda Base,Demanda intermedia,Demanda punta,Factor de potencia,Factor de carga,Carga contratada (KW)
+599121100630,3 Samalayuca,Enero,2025,34455.37,2756.3704,0.0,0.0,-0.7404,37211.0,14838.0,3228.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,97.71,7.63,45.0
+599121100630,3 Samalayuca,Febrero,2025,35349.98,2828.0,0.0,0.0,0.02,38178.0,14633.0,3198.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,97.69,7.25,45.0
+599121100630,3 Samalayuca,Abril,2025,37982.05,3038.5926,0.0,0.0,0.3574,41021.0,16209.0,3545.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,97.69,8.31,45.0
+599121100630,3 Samalayuca,Julio,2025,37548.34,3003.8519,0.0,0.0,-0.1919,40552.0,15473.0,3388.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,97.69,6.97,45.0
+599121100630,3 Samalayuca,Agosto,2025,30018.97,2401.5556,0.0,0.0,0.4744,32421.0,15473.0,2688.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,97.69,6.08,45.0

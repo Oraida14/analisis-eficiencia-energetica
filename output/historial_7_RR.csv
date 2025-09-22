@@ -1,0 +1,5 @@
+RPU,Sitio,Mes,Año,SUBTOTAL,IVA 8%,DAP,Cargos y depósitos,Créditos y redondeos,TOTAL RECIBO,KWH,KVARH,Consumo base,Consumo inter,Consumo punta,"TOTAL KWh (suma b,i,p)",Demanda Base,Demanda intermedia,Demanda punta,Factor de potencia,Factor de carga,Carga contratada (KW)
+595241200900,7-RR,Febrero,2025,1194.19,95.503,59.71,0.0,-0.403,1349.0,50.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,90.0,0.71,80.0
+595241200900,7-RR,Abril,2025,30535.56,2442.8363,59.71,0.0,-0.1063,33038.0,12446.0,4635.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,93.71,3.55,80.0
+595241200900,7-RR,Julio,2025,11413.43,913.0585,59.71,0.0,-0.1985,12386.0,4300.0,2082.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,90.0,1.04,80.0
+595241200900,7-RR,Agosto,2025,11342.55,907.3548,59.71,0.0,-0.6148,12309.0,4300.0,2082.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,90.0,1.14,80.0

@@ -1,0 +1,6 @@
+RPU,Sitio,Mes,Año,SUBTOTAL,IVA 8%,DAP,Cargos y depósitos,Créditos y redondeos,TOTAL RECIBO,KWH,KVARH,Consumo base,Consumo inter,Consumo punta,"TOTAL KWh (suma b,i,p)",Demanda Base,Demanda intermedia,Demanda punta,Factor de potencia,Factor de carga,Carga contratada (KW)
+599090701575,Pozo Loma Blanca,Enero,2025,64563.8,5165.1111,0.0,0.0,0.0889,69729.0,24759.0,21477.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,75.54,7.99,86.0
+599090701575,Pozo Loma Blanca,Febrero,2025,69435.11,5554.8148,0.0,0.0,0.0752,74990.0,25676.0,22613.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,75.05,8.57,86.0
+599090701575,Pozo Loma Blanca,Abril,2025,67631.54,5410.5185,0.0,0.0,-0.0585,73042.0,25863.0,21862.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,76.37,8.64,86.0
+599090701575,Pozo Loma Blanca,Julio,2025,77422.73,6193.7778,0.0,0.0,-0.5078,83616.0,28637.0,25068.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,75.24,8.4,86.0
+599090701575,Pozo Loma Blanca,Agosto,2025,68428.77,5474.2963,0.0,0.0,-0.0663,73903.0,28637.0,21305.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,76.85,8.26,86.0
